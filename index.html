@@ -26,60 +26,63 @@
       overflow-x: hidden;
     }
     body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  backdrop-filter: blur(1em) brightness(6);
-  background-image: radial-gradient(
-    circle at 50% 50%,
-    #0000 0,
-    #0000 2px,
-    hsl(0 0 4%) 2px
-  );
-  background-size: 8px 8px;
-  pointer-events: none;
-}
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      backdrop-filter: blur(1em) brightness(6);
+      background-image: radial-gradient(
+        circle at 50% 50%,
+        #0000 0,
+        #0000 2px,
+        hsl(0 0 4%) 2px
+      );
+      background-size: 8px 8px;
+      pointer-events: none;
+    }
 
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  --c: #09f;
-  background-color: #000;
-  background-image:
-    radial-gradient(4px 100px at 0% 50%, var(--c), #0000),
-    radial-gradient(4px 100px at 20% 50%, var(--c), #0000),
-    radial-gradient(1.5px 1.5px at 10% 25%, var(--c) 100%, #0000 150%),
-    radial-gradient(4px 100px at 40% 50%, var(--c), #0000),
-    radial-gradient(4px 100px at 60% 50%, var(--c), #0000),
-    radial-gradient(1.5px 1.5px at 50% 25%, var(--c) 100%, #0000 150%),
-    radial-gradient(4px 100px at 80% 50%, var(--c), #0000),
-    radial-gradient(4px 100px at 100% 50%, var(--c), #0000),
-    radial-gradient(1.5px 1.5px at 90% 25%, var(--c) 100%, #0000 150%),
-    radial-gradient(4px 100px at 10% 70%, var(--c), #0000),
-    radial-gradient(4px 100px at 30% 70%, var(--c), #0000),
-    radial-gradient(1.5px 1.5px at 20% 35%, var(--c) 100%, #0000 150%),
-    radial-gradient(4px 100px at 50% 70%, var(--c), #0000),
-    radial-gradient(4px 100px at 70% 70%, var(--c), #0000),
-    radial-gradient(1.5px 1.5px at 60% 35%, var(--c) 100%, #0000 150%),
-    radial-gradient(4px 100px at 90% 70%, var(--c), #0000),
-    radial-gradient(4px 100px at 100% 70%, var(--c), #0000),
-    radial-gradient(1.5px 1.5px at 95% 35%, var(--c) 100%, #0000 150%);
-  background-size: 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px;
-  animation: scan 150s linear infinite;
-}
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      --c: #09f;
+      background-color: #000;
+      background-image:
+        radial-gradient(4px 100px at 0% 50%, var(--c), #0000),
+        radial-gradient(4px 100px at 20% 50%, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 10% 25%, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 40% 50%, var(--c), #0000),
+        radial-gradient(4px 100px at 60% 50%, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 50% 25%, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 80% 50%, var(--c), #0000),
+        radial-gradient(4px 100px at 100% 50%, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 90% 25%, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 10% 70%, var(--c), #0000),
+        radial-gradient(4px 100px at 30% 70%, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 20% 35%, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 50% 70%, var(--c), #0000),
+        radial-gradient(4px 100px at 70% 70%, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 60% 35%, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 90% 70%, var(--c), #0000),
+        radial-gradient(4px 100px at 100% 70%, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 95% 35%, var(--c) 100%, #0000 150%);
+      background-size: 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px, 300px 300px;
+      animation: scan 150s linear infinite;
+    }
 
-@keyframes scan {
-  0% { background-position: 0px 0px, 3px 0px, 151.5px 25px, 25px 50px, 28px 50px, 176.5px 75px, 50px 100px, 53px 100px, 201.5px 125px, 75px 150px, 78px 150px, 226.5px 175px, 100px 200px, 103px 200px, 251.5px 225px, 125px 250px, 128px 250px, 276.5px 275px; }
-  to { background-position: 0px 6800px, 3px 6800px, 151.5px 6825px, 25px 13650px, 28px 13650px, 176.5px 13675px, 50px 5425px, 53px 5425px, 201.5px 5450px, 75px 17175px, 78px 17175px, 226.5px 17200px, 100px 5125px, 103px 5125px, 251.5px 5150px, 125px 8450px, 128px 8450px, 276.5px 8475px; }
-}
+    @keyframes scan {
+      0% { background-position: 0px 0px, 3px 0px, 151.5px 25px, 25px 50px, 28px 50px, 176.5px 75px, 50px 100px, 53px 100px, 201.5px 125px, 75px 150px, 78px 150px, 226.5px 175px, 100px 200px, 103px 200px, 251.5px 225px, 125px 250px, 128px 250px, 276.5px 275px; }
+      to { background-position: 0px 6800px, 3px 6800px, 151.5px 6825px, 25px 13650px, 28px 13650px, 176.5px 13675px, 50px 5425px, 53px 5425px, 201.5px 5450px, 75px 17175px, 78px 17175px, 226.5px 17200px, 100px 5125px, 103px 5125px, 251.5px 5150px, 125px 8450px, 128px 8450px, 276.5px 8475px; }
+    }
+
     .gallery-header {
       text-align: center;
       margin-bottom: 30px;
       padding-top: 10px;
+      position: relative;
+      z-index: 1;
     }
     .gallery-title {
       font-size: clamp(2.4rem, 12vw, 4.2rem);
@@ -92,12 +95,13 @@ body::after {
       filter: drop-shadow(0 0 25px rgba(64, 201, 255, 0.15));
       line-height: 1.2;
     }
-    .gallery-header {
-      text-align: center;
-      margin-bottom: 30px;
-      padding-top: 10px;
-      position: relative;
-      z-index: 1;
+    .gallery-sub {
+      font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+      color: rgba(255, 255, 255, 0.3);
+      letter-spacing: 4px;
+      margin-top: 6px;
+      font-weight: 300;
+      font-style: italic;
     }
     .gallery-grid {
       display: flex;
@@ -107,6 +111,8 @@ body::after {
       max-width: 1200px;
       width: 100%;
       margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
     }
 
     .card {
@@ -203,6 +209,8 @@ body::after {
     .modal-overlay.active {
       display: flex;
     }
+
+    /* ===== 弹窗主体（全局样式） ===== */
     .modal-content {
       background: #1a1a2a;
       border-radius: 24px;
@@ -216,6 +224,59 @@ body::after {
       border: 1px solid rgba(255, 255, 255, 0.06);
       position: relative;
     }
+
+    /* 霓虹边框（全局） */
+    .modal-content::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 28px;
+      background: linear-gradient(315deg, #03a9f4, #ff0058);
+      z-index: -1;
+      opacity: 0.7;
+      transition: opacity 0.4s;
+    }
+    .modal-content::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 28px;
+      background: linear-gradient(315deg, #03a9f4, #ff0058);
+      filter: blur(30px);
+      z-index: -2;
+      opacity: 0.5;
+      transition: opacity 0.4s;
+    }
+    .modal-content:hover::before,
+    .modal-content:hover::after {
+      opacity: 1;
+    }
+
+    /* Mac 标题栏（全局） */
+    .mac-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px 0 16px;
+      margin-bottom: 8px;
+    }
+    .mac-header span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .mac-header .red { background: #ff5f57; }
+    .mac-header .yellow { background: #ffbd2e; }
+    .mac-header .green { background: #28c941; }
+    .mac-header .mac-title {
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+      margin-left: 8px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
     .modal-left {
       flex: 0 0 50%;
       background: #0d0d17;
@@ -348,12 +409,8 @@ body::after {
       transform: translateY(-40px);
     }
     @keyframes enlarge {
-      0% {
-        transform: scale(0.5);
-      }
-      100% {
-        transform: scale(1.2);
-      }
+      0% { transform: scale(0.5); }
+      100% { transform: scale(1.2); }
     }
 
     .mascot-wrapper {
@@ -412,6 +469,7 @@ body::after {
       text-decoration: none;
     }
 
+    /* ===== 响应式：小屏幕 ===== */
     @media (max-width: 650px) {
       .card {
         width: 46vw;
@@ -424,71 +482,11 @@ body::after {
       .card .title-overlay .by {
         font-size: 11px;
       }
+
       .modal-content {
-  background: #1a1a2a;
-  border-radius: 24px;
-  max-width: 700px;
-  width: 100%;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  position: relative;
-}
-
-/* 霓虹边框 */
-    .modal-content::before {
-      content: '';
-      position: absolute;
-      inset: -6px;
-      border-radius: 28px;
-      background: linear-gradient(315deg, #03a9f4, #ff0058);
-      z-index: -1;
-      opacity: 0.7;
-      transition: opacity 0.4s;
-    }
-    .modal-content::after {
-      content: '';
-      position: absolute;
-      inset: -6px;
-      border-radius: 28px;
-      background: linear-gradient(315deg, #03a9f4, #ff0058);
-      filter: blur(30px);
-      z-index: -2;
-      opacity: 0.5;
-      transition: opacity 0.4s;
-    }
-    .modal-content:hover::before,
-    .modal-content:hover::after {
-      opacity: 1;
-    }
-
-    /* Mac 标题栏 */
-    .mac-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 16px 0 16px;
-      margin-bottom: 8px;
-    }
-    .mac-header span {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .mac-header .red { background: #ff5f57; }
-    .mac-header .yellow { background: #ffbd2e; }
-    .mac-header .green { background: #28c941; }
-    .mac-header .mac-title {
-      color: rgba(255,255,255,0.4);
-      font-size: 13px;
-      margin-left: 8px;
-      font-weight: 300;
-      letter-spacing: 0.5px;
-    }
+        flex-direction: column;
+        max-height: 90vh;
+      }
       .modal-left {
         flex: 0 0 auto;
         height: 40vh;
@@ -528,11 +526,10 @@ body::after {
         padding: 2px 12px;
       }
     }
+
     @media (max-width: 400px) {
       .gallery-grid {
         gap: 24px 12px;
-        position: relative;
-        z-index: 1;
       }
       .card {
         width: 44vw;
@@ -580,34 +577,34 @@ body::after {
 
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal-content">
-  <!-- Mac 标题栏 -->
-  <div class="mac-header">
-    <span class="red"></span>
-    <span class="yellow"></span>
-    <span class="green"></span>
-    <span class="mac-title">画作详情</span>
-  </div>
-  <button class="modal-close" id="modalClose">&times;</button>
-  <div class="modal-left">
-    <img id="modalImage" src="" alt="画作" onerror="this.src='images/art_default.png';" />
-  </div>
-  <div class="modal-right">
-    <div class="modal-author" id="modalAuthor">by 十二</div>
-    <div class="modal-title" id="modalTitle">标题</div>
-    <div class="modal-desc" id="modalDesc">简介</div>
-    <div class="like-button" id="likeButton">
-      <input class="on" id="heart" type="checkbox" />
-      <label class="like" for="heart" id="likeLabel">
-        <svg class="like-icon" fill-rule="nonzero" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
-        </svg>
-        <span class="like-text">Likes</span>
-      </label>
-      <span class="like-count one" id="likeCountOne">0</span>
-      <span class="like-count two" id="likeCountTwo">0</span>
+      <!-- Mac 标题栏 -->
+      <div class="mac-header">
+        <span class="red"></span>
+        <span class="yellow"></span>
+        <span class="green"></span>
+        <span class="mac-title">画作详情</span>
+      </div>
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-left">
+        <img id="modalImage" src="" alt="画作" onerror="this.src='images/art_default.png';" />
+      </div>
+      <div class="modal-right">
+        <div class="modal-author" id="modalAuthor">by 十二</div>
+        <div class="modal-title" id="modalTitle">标题</div>
+        <div class="modal-desc" id="modalDesc">简介</div>
+        <div class="like-button" id="likeButton">
+          <input class="on" id="heart" type="checkbox" />
+          <label class="like" for="heart" id="likeLabel">
+            <svg class="like-icon" fill-rule="nonzero" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+            </svg>
+            <span class="like-text">Likes</span>
+          </label>
+          <span class="like-count one" id="likeCountOne">0</span>
+          <span class="like-count two" id="likeCountTwo">0</span>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </div>
 
   <script>
@@ -694,7 +691,7 @@ body::after {
         author: '十二'
       }, {
         id: 'art-011',
-        title: 'ddrz',
+        title: 'ddzr',
         image: 'https://s3.bmp.ovh/2026/07/03/S5DOq6dR.jpg',
         localImage: 'images/ddrz.png',
         description: '压制一个',
